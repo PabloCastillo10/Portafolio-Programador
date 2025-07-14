@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente",
+        title: "Desarrollador Full-Stack - InnovaQ",
+        description:
+            "Desarrollando una API REST en el backend con Node.js y una página web en el frontend con React.js, con el objetivo de implementar un sistema para que los clientes de la empresa puedan realizar pedidos y consultar los productos disponibles.",
+        link: "#",
+    }
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem  {...experience} />
+      </li>
+    ))
+  }
+</ol>

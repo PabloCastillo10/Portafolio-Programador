@@ -1,0 +1,93 @@
+---
+import Badge from "../components/Badge.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import foto from "../assets/circulo.png";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Social from "../components/icons/Social.astro";
+import GithubIcons from "../components/icons/GithubIcons.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Facebook from "../components/icons/Facebook.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+---
+
+<Layout
+	title="Portafolio web de Pablo Castillo - Estudiante de Informatica"
+	description="Contrata a Pablo Castillo para desarrollar tus proyectos web."
+>
+	<main>
+		<SectionContainer class="py-44 pb-24">
+			<img
+				class="rounded-full size-16 mb-4"
+				src={foto.src}
+				alt="Foto de Pablo"
+			/>
+			<h1
+				class="text-dark text-5xl font-bold flex flex-row gap-x-4 pb-10"
+			>
+				Hey, soy Pablo Castillo
+				<a
+					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+					><Badge>Disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>+3 años estudiando informática.</span><span
+					class="text-yellow-200/90"
+				>
+					Desarrollador full-stack</span
+				>
+				. <span class="text-red-200/90"
+					>De Guatemala, Ciudad de Guatemala Gt
+				</span>.
+				<span class="opacity-75"
+					>Me especializo en desarrollar aplicaciones back-end y
+					front-end.</span
+				>
+			</h2>
+			<nav class="flex gap-x-4 mt-8">
+				<Social
+					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
+				>
+					<LinkedIn class="size-6" />
+					LinkedIn
+				</Social>
+				<Social href="https://github.com/PabloCastillo10">
+					<GithubIcons class="size-6" />
+					Github
+				</Social>
+
+				<Social href="https://www.instagram.com/xldaniel__/">
+					<Instagram class="size-6" />
+					Instagram
+				</Social>
+
+				<Social
+					href="https://www.facebook.com/profile.php?id=100050212087089"
+				>
+					<Facebook class="size-6" />
+					Facebook
+				</Social>
+
+				<Social>
+					<Mail class="size-6" />
+					pablocastillo4821@gmail.com
+				</Social>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size-7 " />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
+</Layout>
