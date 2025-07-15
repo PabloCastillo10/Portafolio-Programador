@@ -32,9 +32,11 @@ const {title, description} = Astro.props;
 	:root {
 		color-scheme: light dark;
 	}
+	
 	html {
 		font-family: "Open Sans" system-ui, sans-serif;
 		scroll-behavior: smooth;
+		scrollbar-width: none;
 		
 	}
 	body {
@@ -42,6 +44,8 @@ const {title, description} = Astro.props;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		
+		
 	}
 
 	@media (prefers-reduced-motion: reduce) {

@@ -12,21 +12,23 @@ import Mail from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
 	title="Portafolio web de Pablo Castillo - Estudiante de Informatica"
 	description="Contrata a Pablo Castillo para desarrollar tus proyectos web."
 >
-	<main>
-		<SectionContainer class="py-44 pb-24">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
 			<img
 				class="rounded-full size-16 mb-4"
 				src={foto.src}
 				alt="Foto de Pablo"
 			/>
 			<h1
-				class="text-dark text-5xl font-bold flex flex-row gap-x-4 pb-10"
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				Hey, soy Pablo Castillo
 				<a
@@ -37,7 +39,7 @@ import BriefCase from "../components/icons/BriefCase.astro";
 					><Badge>Disponible para trabajar</Badge></a
 				>
 			</h1>
-			<h2 class="text-2xl text-wrap">
+			<h2 class="text-xl text-2xl text-wrap max-w-[700px]">
 				<span>+3 años estudiando informática.</span><span
 					class="text-yellow-200/90"
 				>
@@ -51,43 +53,51 @@ import BriefCase from "../components/icons/BriefCase.astro";
 					front-end.</span
 				>
 			</h2>
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<Social
 					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
 				>
-					<LinkedIn class="size-6" />
+					<LinkedIn class="size-4 lg:size-6" />
 					LinkedIn
 				</Social>
 				<Social href="https://github.com/PabloCastillo10">
-					<GithubIcons class="size-6" />
+					<GithubIcons class="size-4 lg:size-6" />
 					Github
 				</Social>
 
 				<Social href="https://www.instagram.com/xldaniel__/">
-					<Instagram class="size-6" />
+					<Instagram class="size-4 lg:size-6" />
 					Instagram
 				</Social>
 
 				<Social
 					href="https://www.facebook.com/profile.php?id=100050212087089"
 				>
-					<Facebook class="size-6" />
+					<Facebook class="size-4 md:size-6" />
 					Facebook
 				</Social>
 
-				<Social>
-					<Mail class="size-6" />
+				<Social href="mailto:pablocastillo4821@gmail.com">
+					<Mail class="size-4 md:size-6" />
 					pablocastillo4821@gmail.com
 				</Social>
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia">
+		<SectionContainer id="curriculum">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<BriefCase class="size-7 " />
+				<BriefCase class="size-7" />
 				Experiencia Laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos-vista">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7" />
+				Proyectos Vista
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
