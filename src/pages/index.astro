@@ -14,6 +14,8 @@ import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Habilidades from "../components/Habilidades.astro";
+import Habilities from "../components/icons/Habilities.astro"
 ---
 
 <Layout
@@ -39,7 +41,7 @@ import Projects from "../components/Projects.astro";
 					><Badge>Disponible para trabajar</Badge></a
 				>
 			</h1>
-			<h2 class="text-xl text-2xl text-wrap max-w-[700px]">
+			<h2 class="text-xl text-2xl text-wrap max-w-[700px] text-white">
 				<span>+3 años estudiando informática.</span><span
 					class="text-yellow-200/90"
 				>
@@ -53,7 +55,7 @@ import Projects from "../components/Projects.astro";
 					front-end.</span
 				>
 			</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap">
+			<nav class="flex gap-4 mt-8 flex-wrap text-white">
 				<Social
 					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
 				>
@@ -84,8 +86,16 @@ import Projects from "../components/Projects.astro";
 			</nav>
 		</SectionContainer>
 
+		<SectionContainer id="habilidades">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
+				<Habilities class="size-7" />
+				Habilidades
+			</h2>
+			<Habilidades />
+		</SectionContainer>
+
 		<SectionContainer id="curriculum">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
 				<BriefCase class="size-7" />
 				Experiencia Laboral
 			</h2>
@@ -93,7 +103,7 @@ import Projects from "../components/Projects.astro";
 		</SectionContainer>
 
 		<SectionContainer id="proyectos-vista">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
 				<Code class="size-7" />
 				Proyectos Vista
 			</h2>

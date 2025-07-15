@@ -1,0 +1,83 @@
+---
+import HabilidadesItem from "./HabilidadesItem.astro";
+
+const HABILIDADES = [
+  {
+
+    titulo: "JavaScript",
+    porcentaje: "Porcentaje : 50%",
+    imagen : "/log/javascript.svg"
+  },
+  {
+    titulo: "MySQL",
+    porcentaje: "Porcentaje : 60%",
+    imagen : "/log/mysql.svg"
+  },
+  {
+    titulo: "Java",
+    porcentaje: "Porcentaje : 45%",
+    imagen : "/log/java.svg"
+  },
+  {
+    titulo: "Astro",
+    porcentaje: "Porcentaje : 30%",
+    imagen : "/log/astro.svg"
+  },
+  {
+    titulo: "MongoDB",
+    porcentaje: "Porcentaje : 70%",
+    imagen : "/log/mongodb.svg"
+  },
+  {
+    titulo: "Material UI",
+    porcentaje: "Porcentaje : 70%",
+    imagen : "/log/materialui.svg"
+  },
+  {
+    titulo: "Bootstrap",
+    porcentaje: "Porcentaje : 80%",
+    imagen : "/log/bootstrap.svg"
+  },
+  {
+    titulo: "Express Js",
+    porcentaje: "Porcentaje : 60%",
+    imagen : "/log/expressjs.svg"
+  },
+  {
+    titulo: "JWT",
+    porcentaje: "Porcentaje : 60%",
+    imagen : "/log/jwt.svg"
+  },
+  {
+    titulo: "Node.js",
+    porcentaje: "Porcentaje : 70%",
+    imagen : "/log/java.svg"
+  },
+  {
+    titulo: "React",
+    porcentaje: "Porcentaje : 50%",
+    imagen : "/log/React_dark.svg"
+  },
+  {
+    titulo: "HTML",
+    porcentaje: "Porcentaje : 60%",
+    imagen : "/log/java.svg"
+  },
+  {
+    titulo: "CSS",
+    porcentaje: "Porcentaje : 35%",
+    imagen : "/log/java.svg"
+  },
+  {
+    titulo: "Tailwind CSS",
+    porcentaje: "Porcentaje : 25%",
+    imagen : "/log/java.svg"
+  },
+];
+---
+
+<ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {HABILIDADES.map((habilidades) => (
+      <HabilidadesItem {...habilidades} />
+    ))}
+  </ol>
