@@ -3,81 +3,93 @@ import HabilidadesItem from "./HabilidadesItem.astro";
 
 const HABILIDADES = [
   {
-
     titulo: "JavaScript",
-    porcentaje: "Porcentaje : 50%",
-    imagen : "/log/javascript.svg"
+    porcentaje: "50%",
+    imagen: "/log/javascript.svg"
   },
   {
     titulo: "MySQL",
-    porcentaje: "Porcentaje : 60%",
-    imagen : "/log/mysql.svg"
+    porcentaje: "60%",
+    imagen: "/log/mysql.svg"
   },
   {
     titulo: "Java",
-    porcentaje: "Porcentaje : 45%",
-    imagen : "/log/java.svg"
+    porcentaje: "45%",
+    imagen: "/log/java.svg"
   },
   {
     titulo: "Astro",
-    porcentaje: "Porcentaje : 30%",
-    imagen : "/log/astro.svg"
+    porcentaje: "30%",
+    imagen: "/log/astro.svg"
   },
   {
     titulo: "MongoDB",
-    porcentaje: "Porcentaje : 70%",
-    imagen : "/log/mongodb.svg"
+    porcentaje: "70%",
+    imagen: "/log/mongodb.svg"
   },
   {
     titulo: "Material UI",
-    porcentaje: "Porcentaje : 70%",
-    imagen : "/log/materialui.svg"
+    porcentaje: "70%",
+    imagen: "/log/materialui.svg"
   },
   {
     titulo: "Bootstrap",
-    porcentaje: "Porcentaje : 80%",
-    imagen : "/log/bootstrap.svg"
+    porcentaje: "80%",
+    imagen: "/log/bootstrap.svg"
   },
   {
     titulo: "Express Js",
-    porcentaje: "Porcentaje : 60%",
-    imagen : "/log/expressjs.svg"
+    porcentaje: "60%",
+    imagen: "/log/expressjs.svg"
   },
   {
     titulo: "JWT",
-    porcentaje: "Porcentaje : 60%",
-    imagen : "/log/jwt.svg"
+    porcentaje: "60%",
+    imagen: "/log/jwt.svg"
   },
   {
     titulo: "Node.js",
-    porcentaje: "Porcentaje : 70%",
-    imagen : "/log/java.svg"
+    porcentaje: "70%",
+    imagen: "/log/nodejs.svg"
   },
   {
     titulo: "React",
-    porcentaje: "Porcentaje : 50%",
-    imagen : "/log/React_dark.svg"
+    porcentaje: "50%",
+    imagen: "/log/React_dark.svg"
   },
   {
     titulo: "HTML",
-    porcentaje: "Porcentaje : 60%",
-    imagen : "/log/java.svg"
+    porcentaje: "85%",
+    imagen: "/log/html5.svg"
   },
   {
     titulo: "CSS",
-    porcentaje: "Porcentaje : 35%",
-    imagen : "/log/java.svg"
+    porcentaje: "35%",
+    imagen: "/log/css_old.svg"
   },
   {
-    titulo: "Tailwind CSS",
-    porcentaje: "Porcentaje : 25%",
-    imagen : "/log/java.svg"
+    titulo: "Postman",
+    porcentaje: "75%",
+    imagen: "/log/postman.svg"
   },
 ];
 ---
 
-<ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {HABILIDADES.map((habilidades) => (
-      <HabilidadesItem {...habilidades} />
-    ))}
-  </ol>
+<section class="py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+      Mis Habilidades
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {HABILIDADES.map((habilidad, index) => (
+        <HabilidadesItem 
+          {...habilidad} 
+          client:load
+          class="transition-all duration-500 hover:z-10"
+          style={`transition-delay: ${index * 50}ms`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
