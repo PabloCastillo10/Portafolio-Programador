@@ -1,5 +1,5 @@
 ---
-import HabilidadItem from "./HabilidadItem.astro";
+import Hab from "./Hab.astro";
 
 const HABILIDADES = [
   {
@@ -93,9 +93,8 @@ const HABILIDADES = [
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {HABILIDADES.map((habilidad, index) => (
-        <HabilidadItem 
+        <Hab 
           {...habilidad} 
-          client:load
         />
       ))}
     </div>
