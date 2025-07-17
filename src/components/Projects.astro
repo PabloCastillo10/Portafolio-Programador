@@ -1,48 +1,105 @@
 ---
+import React from "./icons/React.astro"
+import NodeJs from "./icons/NodeJs.astro"
+import Mongo from "./icons/Mongo.astro"
+import Express from "./icons/express.astro"
+import Js from "./icons/Js.astro"
+import Jwt from "./icons/jwt.astro"
+import Tailwind from "./icons/tailwind.astro"
+import Bootstrap from "./icons/bootstrap.astro"
+import Material from "./icons/Material.astro"
+import ProjectsItem from "./ProjectsItem.astro"
+
+const TAGS = {
+    REACT : {
+        name: "React",
+        class : "bg-black/90 text-[#58c4dc] hover:bg-black",
+        icon : React
+    },
+    NODE : {
+        name: "Node.js",
+        class : "bg-black/90 text-[#5dab46] hover:bg-black",
+        icon : NodeJs
+    },
+    MONGO : {
+        name: "MongoDB",
+        class : "bg-black/90 text-[#01ec64] hover:bg-black",
+        icon : Mongo
+    },
+    JS : {
+        name: "Java Script",
+        class : "bg-black/90 text-[#f0db4f] hover:bg-black",
+        icon : Js
+    },
+    EXPRESS : {
+        name: "Express",
+        class : "bg-white/90 text-black hover:bg-white",
+        icon : Express
+    },
+    JWT : {
+        name: "JWT",
+        class : "bg-black/90 text-[#58c4dc] hover:bg-black",
+        icon : Jwt
+    },
+    TAILWIND : {
+        name: "Tailwind",
+        class : "bg-black/90 text-[#38bdf8] hover:bg-black",
+        icon : Tailwind
+    },
+    BOOTSTRAP : {
+        name: "Bootstrap",
+        class : "bg-black/90 text-[#7e13f8] hover:bg-black",
+        icon : Bootstrap
+    },
+    MATERIAL : {
+        name: "Material",
+        class : "bg-black/90 text-[#007fff] hover:bg-black",
+        icon : Material
+    },
+}
+
 const PROJECTS = [
     {
-        title: "Sistema de Bancos",
-        link: "#",
-        github: "https://github.com/KevinDGutierrez/Banking-System-Frontend.git",
-        image: "/projects/proyect1.webp",
-        tags: ["React", "Node.js", "MongoDB", "HTML", "CSS", "JavaScript"],
+        title : "Sistema de Bancos",
+        descripcion: "Este proyecto es un sistema de gestión de bancos, que permite a los clientes realizar transacciones de ingresos y salidas, así como solicitar creditos y realizar depósitos. En el lado del administrador, se pueden realizar tareas como la aprobacion de nuevos usuarios, la gestión de los saldos, la gestión de las transacciones y la gestión de los depósitos.",
+        tags: [TAGS.REACT, TAGS.NODE, TAGS.MONGO, TAGS.JS, TAGS.TAILWIND, TAGS.EXPRESS, TAGS.JWT],
+        github: "https://github.com/KevinDGutierrez/Banking-System-Frontend.git"
     },
     {
         title: "Gestor de Opiniones - Blog",
-        github: "https://github.com/PabloCastillo10/Front-End-Opiniones.git",
-        image: "/projects/proyect2.webp",
+        descripcion: "El proyecto Gestor de Opiniones es un sistema web que permite a los usuarios crear, editar y eliminar sus comentarios de los cursos. Los usuarios pueden crear una cuenta, y ver las opiniones de otros usuarios.",
+        tags : [TAGS.REACT, TAGS.NODE, TAGS.MONGO, TAGS.JS, TAGS.MATERIAL],
+        github: "https://github.com/PabloCastillo10/Front-End-Opiniones.git"
     },
     {
         title: "Sistema de Gestion Hotelera",
-        github: "https://github.com/IanAlfaroSantos/Proyecto-Bimestral2-2025_Fronted.git",
-        image: "/projects/proyect3.webp"
-
+        descripcion: "Este proyecto es un sistema de gestión de hoteles, que permite a los clientes reservar y cancelar sus reservas, así como consultar los detalles de las reservas. En el lado del administrador, se pueden realizar tareas como agregar nuevos hoteles, gestionar los clientes y gestonar las reservas, ver el listado de facturas.",
+        tags : [TAGS.REACT, TAGS.NODE, TAGS.MONGO, TAGS.JS, TAGS.JWT, TAGS.MATERIAL, TAGS.EXPRESS],
+        github: "https://github.com/IanAlfaroSantos/Proyecto-Bimestral2-2025_Fronted.git"
     },
     {
         title: "Api de Ricky And Morty",
-        github: "https://github.com/PabloCastillo10/RickyAndMorty-2023198.git",
-        image : "/projects/proyect4.webp"
+        descripcion: "Este proyecto es una API de Ricky And Morty, que permite a los usuarios consultar los detalles de los personajes de la serie. También permite a los usuarios buscar personajes por nombre y obtener información detallada sobre ellos.",
+        tags : [TAGS.REACT, TAGS.JS, TAGS.BOOTSTRAP],
+        github : "https://github.com/PabloCastillo10/RickyAndMorty-2023198.git"
     },
     {
-        title: "Api de Marvel",
-        github: "https://github.com/PabloCastillo10/Marvel-App.git",
-        image: "/projects/proyect6.webp"
+        title : "Api de Marvel",
+        descripcion: "Este proyecto es una API de Marvel, que permite a los usuarios consultar los detalles de los personajes de la serie. También permite a los usuarios buscar personajes por nombre y obtener información detallada sobre ellos.",
+        tags : [TAGS.REACT, TAGS.JS, TAGS.BOOTSTRAP],
+        github : "https://github.com/PabloCastillo10/Marvel-App.git"
     },
     {
         title: "Gestor de Tareas - Ada School",
-        github : "https://github.com/PabloCastillo10/AgendaWeb.git",
-        image: "projects/proyect5.webp"
+        descripcion: "Este proyecto es un sistema de gestión de tareas, que permite a los usuarios crear, editar y eliminar sus tareas y seleccionar si se encuentran echas, en progreso o completadas.",
+        tags : [TAGS.REACT, TAGS.JS, TAGS.MATERIAL],
+        github : "https://github.com/PabloCastillo10/AgendaWeb.git"
     }
 ]
 ---
 
-<section class="grid grid-cols-1 md: grid-cols-2 gap-10">
-{
-    PROJECTS.map(({title,  image}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-4 text-center items-center">{title}</h3>
-            <img class="rounded shadow-2xl shadow-white/30 mb-6 h-{100}"  src={image} alt={`Captura de pantalla del proyecto ${image}`} />
-        </article>
-    ))
-}
-</section>
+<div class="grid gap-8 max-w-5xl mx-auto">
+  {PROJECTS.map((project) => (
+    <ProjectsItem {...project} />
+  ))}
+</div>

@@ -28,7 +28,7 @@ const HABILIDADES = [
     imagen: "/log/mongodb.svg"
   },
   {
-    titulo: "Material UI",
+    titulo: "Material",
     porcentaje: "70%",
     imagen: "/log/materialui.svg"
   },
@@ -38,7 +38,7 @@ const HABILIDADES = [
     imagen: "/log/bootstrap.svg"
   },
   {
-    titulo: "Express Js",
+    titulo: "Express",
     porcentaje: "60%",
     imagen: "/log/expressjs.svg"
   },
@@ -72,6 +72,16 @@ const HABILIDADES = [
     porcentaje: "75%",
     imagen: "/log/postman.svg"
   },
+  {
+    titulo: "GitHub",
+    porcentaje: "85%",
+    imagen: "/log/github_dark.svg"
+  },
+  {
+    titulo : "Tailwind",
+    porcentaje: "30%",
+    imagen: "/log/tailwindcss.svg"
+  }
 ];
 ---
 
@@ -86,8 +96,6 @@ const HABILIDADES = [
         <HabilidadesItem 
           {...habilidad} 
           client:load
-          class="transition-all duration-500 hover:z-10"
-          style={`transition-delay: ${index * 50}ms`}
         />
       ))}
     </div>

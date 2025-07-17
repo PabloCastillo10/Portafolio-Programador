@@ -1,21 +1,17 @@
 ---
 import Badge from "../components/Badge.astro";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import foto from "../assets/circulo.png";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import Social from "../components/icons/Social.astro";
-import GithubIcons from "../components/icons/GithubIcons.astro";
-import Instagram from "../components/icons/Instagram.astro";
-import Facebook from "../components/icons/Facebook.astro";
-import Mail from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import Code from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro";
+import ViewsProjects from "../components//ViewsProjects.astro";
 import Habilidades from "../components/Habilidades.astro";
-import Habilities from "../components/icons/Habilities.astro"
+import Habilities from "../components/icons/Habilities.astro";
+import Visual from "../components/icons/Visual.astro";
+import Projects from "../components/Projects.astro";
+import My from "../components/My.astro";
 ---
 
 <Layout
@@ -24,70 +20,70 @@ import Habilities from "../components/icons/Habilities.astro"
 >
 	<main class="px-4">
 		<SectionContainer class="py-44 pb-32">
-			<img
-				class="rounded-full size-16 mb-4"
-				src={foto.src}
-				alt="Foto de Pablo"
-			/>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				Hey, soy Pablo Castillo
+			<div class="flex flex-col items-start">
+				<img
+					class="rounded-full size-20 mb-6 border-2 border-yellow-200/30 hover:border-yellow-200/80 transition-all"
+					src={foto.src}
+					alt="Foto de Pablo Castillo"
+				/>
+
+				<h1
+					class="text-white text-4xl md:text-5xl lg:text-6xl font-bold flex flex-col md:flex-row gap-y-2 gap-x-4 pb-6 lg:pb-10"
+				>
+					<span class="flex items-center gap-x-4">
+						¡Hola, soy Pablo Castillo!
+						<a
+							href="https://www.linkedin.com/in/pablo-castillo-112202352/"
+							target="_blank"
+							rel="noopener"
+							class="hidden md:flex"
+						>
+							<Badge class="hover:scale-105 transition-transform"
+								>Disponible para trabajar</Badge
+							>
+						</a>
+					</span>
+				</h1>
+
+				<div class="flex flex-col gap-2">
+					<p class="text-lg md:text-xl text-white/90 italic mb-2">
+						"Nunca digas nunca - cada línea de código es un paso
+						hacia lo imposible"
+					</p>
+
+					<h2
+						class="text-xl md:text-2xl text-wrap max-w-[750px] text-white leading-relaxed"
+					>
+						<span>+3 años estudiando informática. </span>
+						<span class="text-yellow-200/90 font-medium"
+							>Desarrollador full-stack</span
+						>
+						<span> de </span>
+						<span class="text-red-200/90"
+							>Guatemala, Ciudad de Guatemala</span
+						>.
+						<span class="opacity-80 block mt-2">
+							Me especializo en desarrollar aplicaciones back-end
+							y front-end con soluciones que ayuden.
+						</span>
+					</h2>
+				</div>
+
 				<a
 					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
 					target="_blank"
 					rel="noopener"
-					class="flex justify-center items-center"
-					><Badge>Disponible para trabajar</Badge></a
+					class="md:hidden mt-4"
 				>
-			</h1>
-			<h2 class="text-xl text-2xl text-wrap max-w-[700px] text-white">
-				<span>+3 años estudiando informática.</span><span
-					class="text-yellow-200/90"
-				>
-					Desarrollador full-stack</span
-				>
-				. <span class="text-red-200/90"
-					>De Guatemala, Ciudad de Guatemala Gt
-				</span>.
-				<span class="opacity-75"
-					>Me especializo en desarrollar aplicaciones back-end y
-					front-end.</span
-				>
-			</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap text-white">
-				<Social
-					href="https://www.linkedin.com/in/pablo-castillo-112202352/"
-				>
-					<LinkedIn class="size-4 lg:size-6" />
-					LinkedIn
-				</Social>
-				<Social href="https://github.com/PabloCastillo10">
-					<GithubIcons class="size-4 lg:size-6" />
-					Github
-				</Social>
-
-				<Social href="https://www.instagram.com/xldaniel__/">
-					<Instagram class="size-4 lg:size-6" />
-					Instagram
-				</Social>
-
-				<Social
-					href="https://www.facebook.com/profile.php?id=100050212087089"
-				>
-					<Facebook class="size-4 md:size-6" />
-					Facebook
-				</Social>
-
-				<Social href="mailto:pablocastillo4821@gmail.com">
-					<Mail class="size-4 md:size-6" />
-					pablocastillo4821@gmail.com
-				</Social>
-			</nav>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</div>
 		</SectionContainer>
 
 		<SectionContainer id="habilidades">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
+			<h2
+				class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white"
+			>
 				<Habilities class="size-7" />
 				Habilidades
 			</h2>
@@ -95,7 +91,9 @@ import Habilities from "../components/icons/Habilities.astro"
 		</SectionContainer>
 
 		<SectionContainer id="curriculum">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
+			<h2
+				class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white"
+			>
 				<BriefCase class="size-7" />
 				Experiencia Laboral
 			</h2>
@@ -103,11 +101,31 @@ import Habilities from "../components/icons/Habilities.astro"
 		</SectionContainer>
 
 		<SectionContainer id="proyectos-vista">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white">
+			<h2
+				class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white"
+			>
 				<Code class="size-7" />
-				Proyectos Vista
+				Vista de Proyectos
+			</h2>
+			<ViewsProjects />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2
+				class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white"
+			>
+				<Visual class="size-7" />
+				Proyectos
 			</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2
+				class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-white"
+			>
+			</h2>
+			<My />
 		</SectionContainer>
 	</main>
 </Layout>
